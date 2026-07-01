@@ -1,0 +1,33 @@
+{
+  "name": "habibi-dev-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp bot Habibih Store dibangun dengan habibih-bailys.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "HabibiOfficial",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^9.1.3",
+    "axios": "^1.7.7",
+    "chalk": "^4.1.2",
+    "dayjs": "^1.11.13",
+    "fs-extra": "^11.2.0",
+    "habibih-bailys": "^7.3.2",
+    "pino": "^9.6.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "optionalDependencies": {
+    "fluent-ffmpeg": "^2.1.3",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
