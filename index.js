@@ -1,5 +1,5 @@
 // index.js
-// Entry point bot WhatsApp. Menghubungkan ke WhatsApp via habibih-bailys,
+// Entry point bot WhatsApp. Menghubungkan ke WhatsApp via Baileys (resmi),
 // memuat semua command, dan meneruskan setiap pesan/event masuk ke handler.
 
 const {
@@ -7,7 +7,7 @@ const {
   useMultiFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
-} = require("habibih-bailys");
+} = require("baileys");
 const { Boom } = require("@hapi/boom");
 const pino = require("pino");
 const chalk = require("chalk");
@@ -71,7 +71,7 @@ async function startBot() {
   const sock = makeWASocket({
     ...(version ? { version } : {}),
     logger: pino({ level: "silent" }),
-    printQRInTerminal: useQR,
+    printQRInTerminal: false, // deprecated di Baileys 7.x -> QR dirender manual di connection.update
     auth: state,
     browser: ["Ubuntu", "Chrome", "20.0.04"],
   });

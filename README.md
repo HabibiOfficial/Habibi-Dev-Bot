@@ -1,6 +1,6 @@
 # Habibih Dev Bot
 
-Bot WhatsApp berbasis [`habibih-bailys`](https://www.npmjs.com/package/habibih-bailys), dibuat untuk **Habibih Store**. Terinspirasi dari gaya menu bot seperti "Elaine The Primary", dengan struktur command yang mudah dikembangkan.
+Bot WhatsApp berbasis [Baileys](https://www.npmjs.com/package/baileys) resmi, dibuat untuk **Habibih Store**. Terinspirasi dari gaya menu bot seperti "Elaine The Primary", dengan struktur command yang mudah dikembangkan.
 
 ## ✨ Fitur
 
@@ -32,6 +32,10 @@ Beberapa command **berjalan nyata tanpa API tambahan** (menu, ping, group manage
 ```bash
 npm install
 ```
+
+> **Catatan library:** Bot ini memakai **Baileys resmi** (`baileys` di npm, oleh WhiskeySockets). Sebelumnya sempat memakai fork `habibih-bailys`, tetapi fork tersebut meng-hardcode pairing code (`SUK1CH4N`) dan menyebabkan error koneksi **405**, sehingga diganti ke Baileys resmi yang dirawat aktif dan menghasilkan pairing code acak yang benar.
+>
+> **Native module:** Baileys 7.x membutuhkan `whatsapp-rust-bridge` (native). Umumnya sudah menyertakan binary prebuilt. Jika deploy di Pterodactyl/VPS gagal build, pastikan Node.js **v20+** dan (jika perlu) tersedia toolchain build. 
 
 ## ⚙️ Konfigurasi
 

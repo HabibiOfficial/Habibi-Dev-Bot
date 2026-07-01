@@ -30,7 +30,7 @@ const stickerCommand = {
     }
 
     try {
-      const { downloadMediaMessage } = require("habibih-bailys");
+      const { downloadMediaMessage } = require("baileys");
       const targetMsg = quoted
         ? { message: quoted, key: ctx.message.message.extendedTextMessage.contextInfo }
         : ctx.message;
@@ -55,7 +55,7 @@ const toImgCommand = {
     }
 
     try {
-      const { downloadMediaMessage } = require("habibih-bailys");
+      const { downloadMediaMessage } = require("baileys");
       const targetMsg = { message: quoted, key: ctx.message.message.extendedTextMessage.contextInfo };
       const buffer = await downloadMediaMessage(targetMsg, "buffer", {});
       const png = await sharp(buffer).png().toBuffer();

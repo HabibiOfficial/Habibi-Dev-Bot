@@ -41,7 +41,7 @@ function audioEffectCommand(name, aliases, filter, label) {
       }
 
       try {
-        const { downloadMediaMessage } = require("habibih-bailys");
+        const { downloadMediaMessage } = require("baileys");
         const targetMsg = quoted
           ? { message: quoted, key: ctx.message.message.extendedTextMessage.contextInfo }
           : ctx.message;
